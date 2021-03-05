@@ -1,0 +1,31 @@
+{
+	"name": "nc",
+	"version": "1.0.0",
+	"description": "nc-desinfestações",
+	"main": "main.js",
+	"scripts": {
+		"start": "electron ."
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/NMDSilva/nc.git"
+	},
+	"keywords": [
+		"nc",
+		"clientes",
+		"gestao"
+	],
+	"author": "Nuno Silva",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/NMDSilva/nc/issues"
+	},
+	"homepage": "https://github.com/NMDSilva/nc#readme",
+	"devDependencies": {
+		"electron": "^11.1.1"
+	},
+	"dependencies": {
+		"jquery": "^3.5.1",
+		"sqlite3": "^5.0.1"
+	}
+}

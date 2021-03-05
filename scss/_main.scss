@@ -1,0 +1,17 @@
+main {
+	position: relative;
+	height: 100vh;
+	width: calc(100% - 60px);
+	left: 60px;
+	padding: 0 10px;
+
+	h1 {
+		line-height: 60px;
+		width: calc(100% - 60px);
+		color: $cor-texto-menu;
+	}
+
+	#conteudoPagina {
+		min-height: calc(100% - 60px);
+	}
+}
