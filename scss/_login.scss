@@ -3,7 +3,8 @@ section {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(-30deg, #03a9f4 0%, #3a78b7 50%, #262626 50%, #607d8b 100%);
+  // background: linear-gradient(-30deg, #03a9f4 0%, #3a78b7 50%, #262626 50%, #607d8b 100%);
+  background: linear-gradient(-30deg, #8803f4 0%, #703ab7 50%, #262626 50%, #73608b 100%);
 
   .box {
     position: relative;
@@ -17,24 +18,24 @@ section {
     border-radius: 6px;
     box-shadow: 0 5px 35px rgba(0, 0, 0, 0.2);
 
-    &::after {
-      content: '';
-      position: absolute;
-      top: 5px;
-      left: 5px;
-      right: 5px;
-      bottom: 5px;
-      border-radius: 5px;
-      pointer-events: none;
-      background: linear-gradient(
-        to bottom,
-        rgba(255, 255, 255, 0.3) 0%,
-        rgba(255, 255, 255, 0.1) 15%,
-        transparent 50%,
-        transparent 85%,
-        rgba(255, 255, 255, 0.3) 100%
-      );
-    }
+    // &::after {
+    //   content: '';
+    //   position: absolute;
+    //   top: 0px;
+    //   left: 0px;
+    //   right: 0px;
+    //   bottom: 0px;
+    //   border-radius: 5px;
+    //   pointer-events: none;
+    //   background: linear-gradient(
+    //     to bottom,
+    //     rgba(255, 255, 255, 0.3) 0%,
+    //     rgba(255, 255, 255, 0.1) 15%,
+    //     transparent 50%,
+    //     transparent 85%,
+    //     rgba(255, 255, 255, 0.3) 100%
+    //   );
+    // }
   }
 
   .form {
@@ -74,6 +75,63 @@ section {
         color: #fff;
         font-size: 20px;
       }
+
+      input::placeholder {
+        color: #fff;
+      }
+
+      input[type='submit'] {
+        background: #fff;
+        color: #111;
+        max-width: 100px;
+        padding: 8px 10px;
+        box-shadow: none;
+        font-weight: 500;
+        letter-spacing: 1px;
+        cursor: pointer;
+      }
+
+      span {
+        display: none;
+        color: rgba(255, 0, 0, 0.6);
+        font-size: 14px;
+        font-weight: 400;
+        margin: 0 5px;
+      }
+
+      &.erro {
+        input {
+          border: 1px solid rgba(255, 0, 0, 0.4);
+        }
+
+        span {
+          display: block;
+        }
+      }
+    }
+
+    .remeber {
+      position: relative;
+      display: inline-block;
+      color: #fff;
+      font-weight: 300;
+      margin-bottom: 10px;
+      cursor: pointer;
+
+      input {
+        margin-right: 8px;
+      }
+    }
+
+    p {
+      color: #fff;
+      font-weight: 300;
+      font-size: 15px;
+      margin-top: 5px;
+    }
+
+    a {
+      color: #fff;
     }
   }
 }
