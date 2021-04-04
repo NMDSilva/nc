@@ -6,32 +6,31 @@
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous"/>
     <link rel="stylesheet" href="css/start.css">
+    <script src="js/login.js" defer></script>
   </head>
   <body>
     <section>
       <div class="box">
         <div class="form">
-          <h2>Login</h2>
-          <form>
+          <h2>Entrar</h2>
+          <form id="loginForm" onsubmit="return validarFormulario()" action="index.html">
             <div class="inputBx">
-              <input type="text" name="user" placeholder="Utilizador">
+              <input type="email" name="user" id="user" placeholder="Utilizador" autocomplete="off">
               <i class="fas fa-user"></i>
+              <span>Utilizador tem de ser um email</span>
             </div>
             <div class="inputBx">
-              <input type="password" name="password" placeholder="Password">
+              <input type="password" name="password" id="password" placeholder="Password">
               <i class="fas fa-lock"></i>
+              <span>Utilizador ou password incorretos</span>
             </div>
-            <label for="remeber">
-              <input type="checkbox" name="remeber">Lembrar-se de mim
-            </label>
             <div class="inputBx">
               <input type="submit" value="Entrar">
             </div>
           </form>
-          <p>Recuperar <a href="#">password</a></p>
+          <p>Recuperar <a id="recuperar" href="javascript:void(0)">password</a></p>
         </div>
       </div>
     </section>
-    <script src="js/login.js"></script>
   </body>
 </html>
