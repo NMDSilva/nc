@@ -2,9 +2,10 @@
 	"name": "nc",
 	"version": "1.0.0",
 	"description": "nc-desinfestações",
-	"main": "main.js",
+	"main": "app/main.js",
 	"scripts": {
-		"start": "sass scss:src/css --no-source-map --style=compressed && electron ."
+		"start": "sass scss:src/css --no-source-map --style=compressed && electron .",
+		"watch": "sass scss:src/css --watch --no-source-map --style=compressed"
 	},
 	"repository": {
 		"type": "git",
@@ -28,6 +29,7 @@
 		"bcrypt": "^5.0.1",
 		"jquery": "^3.5.1",
 		"sequelize": "^6.5.0",
-		"sqlite3": "^5.0.1"
+		"sqlite3": "^5.0.1",
+		"uuid": "^8.3.2"
 	}
 }
