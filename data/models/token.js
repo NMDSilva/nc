@@ -25,6 +25,7 @@ module.exports = (sequelize, DataTypes) => {
     token_exp: DataTypes.DATE
   }, {
     sequelize,
+    tableName: 'tokens',
     modelName: 'Token',
   });
   return Token;

@@ -9,13 +9,17 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      this.belongsTo(models.UserType, {
-        foreignKey: 'user_type_id',
-        as: 'user_type'
-      })
+    }
+
+    toJSON() {
+      return { ...this.get(), id: undefined }
     }
   };
   User.init({
+    uuid: {
+      type: DataTypes.STRING,
+      defaultValue: DataTypes.UUIDV4
+    },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -44,9 +48,13 @@ module.exports = (sequelize, DataTypes) => {
           msg: 'Este campo não pode ser vazio'
         }
       }
+    },
+    isAdmin: {
+      type: DataTypes.BOOLEAN
     }
   }, {
     sequelize,
+    tableName: 'users',
     modelName: 'User',
   });
   return User;
