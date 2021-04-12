@@ -72,8 +72,7 @@ ipcMain.on('user:login', async (event, userInfo) => {
       password: undefined,
       login: true,
       remeber: userInfo.remeber,
-      // validate: moment().add(7, 'd').format()
-      validate: moment().add(1, 'm').format()
+      validate: moment().add(7, 'd').format()
     }
     store.set('userInfo', userData);
     event.returnValue = userData;
