@@ -15,15 +15,19 @@
           <h2>Entrar</h2>
           <form id="loginForm" onsubmit="return validarFormulario()" action="index.html">
             <div class="inputBx">
-              <input type="email" name="user" id="user" placeholder="Utilizador" autocomplete="off">
+              <input type="email" name="user" id="user" placeholder="Utilizador" autocomplete="off" value="silvanuno@gmail.com">
               <i class="fas fa-user"></i>
-              <span>Utilizador tem de ser um email</span>
+              <span></span>
             </div>
             <div class="inputBx">
               <input type="password" name="password" id="password" placeholder="Password">
               <i class="fas fa-lock"></i>
-              <span>Utilizador ou password incorretos</span>
+              <span></span>
             </div>
+            <label class="remeber" for="remeber">
+              <input type="checkbox" name="remeber" id="remeber">
+              Lembrar-me
+            </label>
             <div class="inputBx">
               <input type="submit" value="Entrar">
             </div>
