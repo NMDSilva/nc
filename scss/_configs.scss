@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
 
-$cor-fundo-geral: #aae2b6;
+$cor-fundo-geral: rgba(#000, 0.05);
 $cor-fundo-menu: #116824;
 $cor-fundo-menu-selecionado: #1aa839;
 $cor-texto-menu: #fff;
@@ -13,7 +13,10 @@ $cor-texto-menu: #fff;
 }
 
 body {
+  position: relative;
+  width: 100%;
   min-height: 100%;
+  overflow-x: hidden;
 }
 
 .carregando {
