@@ -1,5 +1,5 @@
+import Script from 'next/script';
 import type { Metadata } from "next";
-import { useEffect } from "react";
 import 'bootstrap/dist/css/bootstrap.css'
 
 import "./globals.css";
@@ -15,14 +15,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  
-  useEffect(() => {
-    require("bootstrap/dist/js/bootstrap.bundle.min.js");
-  }, []);
-
   return (
     <html lang="pt">
-      <body>{children}</body>
+      <body>
+        {children}
+        <Script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></Script>
+        <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></Script>
+      </body>
     </html>
   );
 }
