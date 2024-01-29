@@ -7,8 +7,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "NC - Desinfestações",
   description: "Landing page",
-  authors: [ { name: 'Nuno Silva' } ],
-  
+  authors: [ { name: 'Nuno Silva' } ]
 };
 
 export default function RootLayout({
