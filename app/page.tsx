@@ -5,7 +5,7 @@ import logo from './images/logo.svg'
 export default function Home() {
   return (
     <>
-      <nav className="navbar bg-body-tertiary fixed-top">
+      <nav className="navbar bg-body-tertiary fixed-top navbar-expand-lg">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
             <Image src={logo} alt="Logo NC - Desinfestações"></Image>
@@ -15,7 +15,7 @@ export default function Home() {
           </button>
           <div className="offcanvas offcanvas-end" tabIndex={-1} id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div className="offcanvas-header">
-              <h5 className="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+              <h5 className="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
               <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div className="offcanvas-body">
