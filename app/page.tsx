@@ -5,7 +5,7 @@ import logo from './images/logo.svg'
 export default function Home() {
   return (
     <>
-      <nav className="navbar bg-body-tertiary fixed-top">
+      <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
             <Image src={logo} alt="Logo NC - Desinfestações"></Image>
