@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="pt">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="./css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --cor-primaria-laranja: #FB8408;
+      --cor-primaria-verde: #047B36;
+      --cor-verde-600: #109E79;
+      --cor-verde-400: #36cea6;
+      --cor-verde-200: #04c494;
+
+      --cor-dark-600: #000000;
+      --cor-dark-400: #585858;
+      --cor-dark-200: #8D8D8D;
+    }
+
+    .card-home{
+      background-color: var(--cor-verde-200);
+    }
+
+    nav .nav-link {
+      position: relative;
+      font-size: 1.25em;
+      margin: 0.25em;
+    }
+    nav .nav-link::before {
+      --tamanho: 0;
+      content: "";
+      position: absolute;
+      bottom: 5px;
+      left: 0;
+      width: var(--tamanho);
+      background-color: var(--cor-primaria-laranja);
+      height: 3px;
+      transition: width 200ms;
+    }
+    nav .nav-link:hover::before,
+    nav .nav-link.active::before {
+      --tamanho: 100%;
+    }
+
+  </style>
+</head>
+
+<body>
+  <nav id="nav-menu" class="navbar bg-body-secondary navbar-expand-md px-3 mb-0 sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#home">
+        <img src="./images/logo.svg" alt="Logo NC - Desinfestações"></img>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" id="offcanvasNavbar" tabindex="-1" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#servicos">Serviços</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contactos">Contactos</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div data-bs-spy="scroll" data-bs-target="#nav-menu" data-bs-root-margin="0px 0px 0px"
+    data-bs-smooth-scroll="true" class="" tabindex="0">
+    <section id="home" class="bg-success bg-opacity-25">
+      <div class="container pt-4 pb-5">
+        <h1>BEM-VINDO À NC - Desinfestações®</h1>
+        <p>O seu parceiro na Gestão de Pragas</p>
+      </div>
+    </section>
+    <section id="servicos" class="bg-body-secondary bg-opacity-25">
+      <div class="container pt-4 pb-5">
+        <h2 class="text-uppercase mb-5">Serviços</h2>
+        <div class="d-flex flex-row justify-content-center flex-wrap flex-md-nowrap gap-5 mb-3">
+          <div class="card" style="width: 18rem;">
+            <img src="./images/pragas.webp" height="200px" class="mx-auto card-img-top img-fluid" alt="imagem gestão de pragas">
+            <div class="card-body">
+              <h5 class="card-title">Gestão de pragas</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
+              </p>
+              <div class="text-end">
+                <a href="#" class="btn btn-link">ver mais</a>
+              </div>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="./images/desinfestacoes.png" height="200px" class="mx-auto card-img-top img-fluid" alt="imagem gestão de pragas">
+            <div class="card-body">
+              <h5 class="card-title">Desinfestações</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.
+              </p>
+              <div class="text-end">
+                <a href="#" class="btn btn-link">ver mais</a>
+              </div>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Tratamento de madeiras</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.
+              </p>
+              <div class="text-end">
+                <a href="#" class="btn btn-link text-end">ver mais</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contactos">
+      <div class="container pt-4 pb-5">
+        <h2 class="text-uppercase mb-5">Contactos</h2>
+      </div>
+    </section>
+  </div>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+
+
